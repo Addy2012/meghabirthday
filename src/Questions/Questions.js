@@ -488,7 +488,7 @@ export const Questions=(props)=> {
   const history = useHistory();
   const buttonClick = () => {
     history.push("/greeting");
-    window.location = '/greeting'
+    // window.location = '/greeting'
   };
   const handleClickListItem = () => {
     setOpen(true);

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/meghabirthday/precache-manifest.58cc90c08b48cc9279c1a43fb89729a3.js"
+  "/meghabirthday/precache-manifest.4f937f76cac56c790ec9e0cc7b850290.js"
 );
 
 self.addEventListener('message', (event) => {

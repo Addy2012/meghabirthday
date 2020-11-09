@@ -1,0 +1,12 @@
+.MuiListItem-gutters {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.MuiListItem-divider {
+    border: 1px solid #c6c6c6;
+    border-radius: 16px;
+    width: 25vw;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.12); */
+    background-clip: padding-box;
+    margin-left: 15%;
+}

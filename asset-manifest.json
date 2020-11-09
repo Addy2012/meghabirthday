@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/meghabirthday/static/css/main.0817c86b.chunk.css",
+    "main.js": "/meghabirthday/static/js/main.3cce9d98.chunk.js",
+    "main.js.map": "/meghabirthday/static/js/main.3cce9d98.chunk.js.map",
+    "runtime-main.js": "/meghabirthday/static/js/runtime-main.9ba8c66b.js",
+    "runtime-main.js.map": "/meghabirthday/static/js/runtime-main.9ba8c66b.js.map",
+    "static/js/2.2b7e0751.chunk.js": "/meghabirthday/static/js/2.2b7e0751.chunk.js",
+    "static/js/2.2b7e0751.chunk.js.map": "/meghabirthday/static/js/2.2b7e0751.chunk.js.map",
+    "index.html": "/meghabirthday/index.html",
+    "precache-manifest.9cc9ed376ee0e15bea72521806b4ac23.js": "/meghabirthday/precache-manifest.9cc9ed376ee0e15bea72521806b4ac23.js",
+    "service-worker.js": "/meghabirthday/service-worker.js",
+    "static/css/main.0817c86b.chunk.css.map": "/meghabirthday/static/css/main.0817c86b.chunk.css.map",
+    "static/js/2.2b7e0751.chunk.js.LICENSE.txt": "/meghabirthday/static/js/2.2b7e0751.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/meghabirthday/static/media/Wallpaper.ec49c69d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ba8c66b.js",
+    "static/js/2.2b7e0751.chunk.js",
+    "static/css/main.0817c86b.chunk.css",
+    "static/js/main.3cce9d98.chunk.js"
+  ]
+}

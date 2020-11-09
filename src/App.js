@@ -4,7 +4,7 @@ import Login from './Login/Login';
 import data from './data.js';
 import {Questions} from './Questions/Questions';
 import {Greetings} from './Greetings/Greetings';
-import { Route, Switch, Link, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -35,13 +35,11 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-      <BrowserRouter>
         <Switch>
-          <Route path='/' exact render={() => <Login loginData={data.login} parentMethod={this.someMethod} />}/>
+          <Route path='/meghabirthday' exact render={() => <Login loginData={data.login} parentMethod={this.someMethod} />}/>
           <Route path='/question' render={() => <Questions pointChange={this.pointChange} questionData={data.questions} pointMark={this.state.points}/> } />
           <Route path='/greeting' render={() => <Greetings /> } />
         </Switch>
-      </BrowserRouter>
       </div>
     );
   }

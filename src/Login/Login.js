@@ -8,8 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { useHistory } from "react-router";
-import {Redirect} from 'react-router-dom';
-// setInterval(change, 1000);
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -21,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
       theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+  },
+  bgc:  {
+    background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.4906337535014006) 35%, rgba(0,212,255,1) 100%)'
   },
   paper: {
     margin: theme.spacing(8, 4),
@@ -65,7 +66,7 @@ function Login(props) {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} /> 
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+      <Grid className={classes.bgc} item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
     <div className={classes.paper}>
     <Avatar className={classes.avatar} src="https://i.postimg.cc/Lsg1cxGB/shinchan.jpg">
     </Avatar>

@@ -1,0 +1,5 @@
+.MuiListItem-button:hover {
+    text-decoration: none;
+    /* background-color: rgba(55, 2, 0, 0.04); */
+    background-color: rgb(74, 62, 141) !important;
+}

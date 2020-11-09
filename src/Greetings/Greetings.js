@@ -1,11 +1,7 @@
 import React,{useEffect} from 'react'
-// import TextScramble from '../scramble.js'
 import './Greetings.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import ScriptTag from 'react-script-tag';
-// import animate from './BirthdayCard/js/animate';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -324,28 +320,12 @@ function reveal() {
 }
 
     }, []);
-    // useEffect(() => {
-    //     console.log(props)
-    //     const phrases = [props.greetingData.salutation,props.greetingData.occasion+" "+props.greetingData.gender,props.greetingData.wishing];
-    //     // const phrases = ['Welcome Guys to this Javascript Course','Where you will get','a complete guide','for javascript','from basic to advance'];
-    //     const el = document.querySelector('.glow');
-    //     const fx = new TextScramble(el);
-    //     let counter = 0;
-    //     const next = () => {
-    //     fx.setText(phrases[counter]).then(() => {
-    //         setTimeout(next, 800);
-    //     });
-    //     counter = (counter + 1) % phrases.length;
-    //     };
-    //     next();
-    //     // animate();
-    // });
+
     return (
       <div className={classes.root}>
         <Grid container>
           <Grid item lg={12} md={12} sm={12} xs={12}>
             <div className="greetingBody">
-            <ScriptTag isHydrating={true} type="text/javascript" src="./BirthdayCard/js/index.js" />
               <div className='moon'>
                 <div className='crater1'></div>
                 <div className='crater2'></div>
@@ -362,37 +342,44 @@ function reveal() {
               <div id="merrywrap" className="merrywrap">
                 <div className="giftbox">
                     <div className="cover">
-                        <div>Make a Wish</div>
+                        <div></div>
                     </div>
                     
-                    <div class="box"></div>
+                    <div className="box"></div>
                 </div>
                 
                 <div className="icons">
                   <div className="row">
-                      <span>M</span>
-                      <span>u</span>
-                      <span>u</span>
-                      <span>u</span>
-                      <span>h</span>
-                      
+                      <span>H</span>
+                      <span>a</span>
+                      <span>p</span>
+                      <span>p</span>
+                      <span>y</span>
                   </div>
                   <div className="row">
-                      <span>k</span>
-                      <span>o</span>
-                      <span>o</span>
-                      <span>o</span>
-                      <span>c</span>
+                      <span>B</span>
+                      <span>i</span>
+                      <span>r</span>
+                      <span>t</span>
                       <span>h</span>
-                      <span>h</span>
+                      <span>d</span>
+                      <span>a</span>
+                      <span>y</span>
                   </div>
                   
                   <div className="row">
                       <span>D</span>
+                      <span>a</span>
+                      <span>y</span>
+                      <span> &nbsp;</span>
+                      <span>M</span>
                       <span>e</span>
-                      <span>n</span>
                       <span>g</span>
-                      <span>e</span>
+                      <span>h</span>
+                      <span>a</span>
+                  </div>
+                  <div className="row">
+                    
                   </div>
                 </div>
               </div>

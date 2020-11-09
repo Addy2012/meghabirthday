@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useEffect} from 'react'
+import TextScramble from '../scramble.js'
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -15,8 +16,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import AnalogClock from 'analog-clock-react';
-import { useHistory } from "react-router";
-// import {Redirect} from 'react-router-dom';
+import './Question.css';
 
 let options = {
   height: "25vh",
@@ -60,7 +60,7 @@ const vacationPlan = [
 ]
 const actors = [
   'None',
-  'Shahrukh Khan',
+  'RajKumar Rao',
   'Akshay Kumar',
   'Hritik Roshan',
   'Gurmeet Ram Rahim Singh Insaan',
@@ -399,19 +399,19 @@ function ConfirmationDialogRaw(props) {
 }
 
 ConfirmationDialogRaw4.propTypes = {
-  onClose1: PropTypes.func.isRequired,
-  open1: PropTypes.bool.isRequired,
-  value1: PropTypes.string.isRequired,
+  onClose4: PropTypes.func.isRequired,
+  open4: PropTypes.bool.isRequired,
+  value4: PropTypes.string.isRequired,
 };
 ConfirmationDialogRaw3.propTypes = {
-  onClose1: PropTypes.func.isRequired,
-  open1: PropTypes.bool.isRequired,
-  value1: PropTypes.string.isRequired,
+  onClose3: PropTypes.func.isRequired,
+  open3: PropTypes.bool.isRequired,
+  value3: PropTypes.string.isRequired,
 };
 ConfirmationDialogRaw2.propTypes = {
-  onClose1: PropTypes.func.isRequired,
-  open1: PropTypes.bool.isRequired,
-  value1: PropTypes.string.isRequired,
+  onClose2: PropTypes.func.isRequired,
+  open2: PropTypes.bool.isRequired,
+  value2: PropTypes.string.isRequired,
 };
 ConfirmationDialogRaw1.propTypes = {
   onClose1: PropTypes.func.isRequired,
@@ -427,7 +427,7 @@ ConfirmationDialogRaw.propTypes = {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    flexGrow: 1
+    flexGrow: 1,
   },
   paper: {
     width: '80%',
@@ -438,12 +438,12 @@ const useStyles = makeStyles((theme) => ({
     margin: '0',
     top: 'auto',
     right: '10%',
-    bottom: '88px',
+    bottom: '34px',
     left: 'auto',
-    position: 'absolute'  
+    position: 'absolute'
   },
   muiListItemDivider :{
-    backgroundColor: '#92a8d1',
+    backgroundColor: '#737b52',
     border: '1px solid #c6c6c6',
     borderRadius: '16px',
     width: '25vw',
@@ -453,6 +453,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Questions=(props)=> {
+      useEffect(() => {
+        const phrases = [props.questionData.message1,props.questionData.message2,props.questionData.message3,props.questionData.message4,props.questionData.message5,props.questionData.message6,props.questionData.message7,props.questionData.message8];
+        // const phrases = ['Welcome Guys to this Javascript Course','Where you will get','a complete guide','for javascript','from basic to advance'];
+        const el = document.querySelector('.glow');
+        const fx = new TextScramble(el);
+        let counter = 0;
+        const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+            setTimeout(next, 800);
+        });
+        counter = (counter + 1) % phrases.length;
+        };
+        next();
+        // animate();
+    },[props.questionData.message1,props.questionData.message2,props.questionData.message3,props.questionData.message4,props.questionData.message5,props.questionData.message6,props.questionData.message7,props.questionData.message8]);
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('selectPapa');
@@ -469,12 +484,8 @@ export const Questions=(props)=> {
   const [flagThird, setFlagThird] = React.useState(true);
   const [flagFourth, setFlagFourth] = React.useState(true);
   const [flagFifth, setFlagFifth] = React.useState(true);
-  const history = useHistory();
   const buttonClick = () => {
-    // window.location = '/greeting'
-    history.push("/greeting");
-    // return <Redirect to '/greeting' />
-    // return <Redirect to='/question'/>
+    window.location = '/greeting'
   };
   const handleClickListItem = () => {
     setOpen(true);
@@ -533,8 +544,9 @@ export const Questions=(props)=> {
     }
   };
   return (
-    <Grid container justify="space-between" spacing={24} className={classes.root}>
-      <Grid>
+    <Grid container justify="space-between" className={classes.root}>
+    <Grid className="glow" item lg={12} md={12} sm={12} xs={12}/>  
+    <Grid>
       <List component="div" role="list">
         <ListItem 
           className={classes.muiListItemDivider}
@@ -657,7 +669,7 @@ export const Questions=(props)=> {
         <AnalogClock {...options} />
       </Box>
     </Grid>
-      <Grid justify="bottom" alignItems="right">
+      <Grid container justify="flex-end" alignItems="flex-end">
       <Button disabled={!(props.pointMark===5)} onClick={buttonClick} className={classes.buttonStyle} variant="contained" color="primary">
         Proceed
       </Button>

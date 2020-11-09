@@ -39,7 +39,7 @@ class App extends Component {
         <Switch>
           <Route path='/' exact render={() => <Login loginData={data.login} parentMethod={this.someMethod} />}/>
           <Route path='/question' render={() => <Questions pointChange={this.pointChange} questionData={data.questions} pointMark={this.state.points}/> } />
-          <Route path='/greeting' render={() => <Greetings greetingData={data.greeting}/> } />
+          <Route path='/greeting' render={() => <Greetings /> } />
         </Switch>
       </BrowserRouter>
       </div>

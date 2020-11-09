@@ -37,8 +37,8 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route path='/meghabirthday' exact render={() => <Login loginData={data.login} parentMethod={this.someMethod} />}/>
-          <Route path='/question' render={() => <Questions pointChange={this.pointChange} questionData={data.questions} pointMark={this.state.points}/> } />
-          <Route path='/greeting' render={() => <Greetings /> } />
+          <Route path='/meghabirthday/question' render={() => <Questions pointChange={this.pointChange} questionData={data.questions} pointMark={this.state.points}/> } />
+          <Route path='/meghabirthday/greeting' render={() => <Greetings /> } />
         </Switch>
       </div>
     );

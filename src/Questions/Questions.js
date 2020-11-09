@@ -487,7 +487,7 @@ export const Questions=(props)=> {
   const [flagFifth, setFlagFifth] = React.useState(true);
   const history = useHistory();
   const buttonClick = () => {
-    history.push("/greeting");
+    history.push("/meghabirthday/greeting");
     // window.location = '/greeting'
   };
   const handleClickListItem = () => {

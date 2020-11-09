@@ -55,7 +55,7 @@ function Login(props) {
     if(email===props.loginData.email && password===props.loginData.password)
       {
         console.log("Hello")
-        history.push("/question");
+        history.push("/meghabirthday/question");
       }
     else
       {

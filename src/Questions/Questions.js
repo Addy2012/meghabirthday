@@ -16,6 +16,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import AnalogClock from 'analog-clock-react';
+import { useHistory } from "react-router";
 import './Question.css';
 
 let options = {
@@ -484,7 +485,9 @@ export const Questions=(props)=> {
   const [flagThird, setFlagThird] = React.useState(true);
   const [flagFourth, setFlagFourth] = React.useState(true);
   const [flagFifth, setFlagFifth] = React.useState(true);
+  const history = useHistory();
   const buttonClick = () => {
+    history.push("/greeting");
     window.location = '/greeting'
   };
   const handleClickListItem = () => {

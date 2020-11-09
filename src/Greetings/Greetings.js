@@ -368,10 +368,6 @@ function reveal() {
                   </div>
                   
                   <div className="row">
-                      <span>D</span>
-                      <span>a</span>
-                      <span>y</span>
-                      <span> &nbsp;</span>
                       <span>M</span>
                       <span>e</span>
                       <span>g</span>

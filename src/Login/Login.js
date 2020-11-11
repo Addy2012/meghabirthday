@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { useHistory } from "react-router";
+import {Howl} from 'howler';
+import bgm from '../asset/birthday.mp3';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -42,10 +45,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 function Login(props) {
+  const soundPlay = (src) => {
+    const sound = new Howl ({
+      src,
+      html5: true
+    })
+    sound.play();
+  }
+  
+const audioClips = [
+  {sound: bgm, label:"rain forest"}
+]
+
   const classes = useStyles();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const history = useHistory();
   function validateForm() {
     return email.length > 0 && password.length > 0;
@@ -55,7 +72,8 @@ function Login(props) {
     if(email===props.loginData.email && password===props.loginData.password)
       {
         console.log("Hello")
-        history.push("/meghabirthday/question");
+        soundPlay(audioClips[0].sound)
+        history.push("/question");
       }
     else
       {
@@ -63,7 +81,8 @@ function Login(props) {
       }
   }
   return (
-    <Grid container component="main" className={classes.root}>
+    <Grid container component="main" className={classes.root}
+    >
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} /> 
       <Grid className={classes.bgc} item xs={12} sm={8} md={5} component={Paper} elevation={6} square>

@@ -374,9 +374,6 @@ function reveal() {
                       <span>h</span>
                       <span>a</span>
                   </div>
-                  <div className="row">
-                    
-                  </div>
                 </div>
               </div>
               <div id="video"></div>

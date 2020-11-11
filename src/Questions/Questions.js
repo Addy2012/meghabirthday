@@ -16,7 +16,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import AnalogClock from 'analog-clock-react';
-import { useHistory } from "react-router";
 import './Question.css';
 
 let options = {
@@ -61,13 +60,13 @@ const vacationPlan = [
 ]
 const actors = [
   'None',
-  'RajKumar Rao',
+  'Raj Kumar Rao',
   'Akshay Kumar',
   'Hritik Roshan',
   'Gurmeet Ram Rahim Singh Insaan',
   'Kamal Rashid Khan',
 ]
-const friends = [
+const tomboy = [
   'None',
   'Priyanka Rajput',
   'Sweta Tiwari',
@@ -114,7 +113,7 @@ function ConfirmationDialogRaw4(props) {
       open={open4}
       {...other}
     >
-      <DialogTitle id="confirmation-dialog-title">Who is your best roommate ?</DialogTitle>
+      <DialogTitle id="confirmation-dialog-title">Who is your Favorite tomboy ?</DialogTitle>
       <DialogContent dividers>
         <RadioGroup
           ref={radioGroupRef}
@@ -123,7 +122,7 @@ function ConfirmationDialogRaw4(props) {
           value={value4}
           onChange={handleChange4}
         >
-          {friends.map((option) => (
+          {tomboy.map((option) => (
             <FormControlLabel value={option} key={option} control={<Radio />} label={option} />
           ))}
         </RadioGroup>
@@ -485,10 +484,8 @@ export const Questions=(props)=> {
   const [flagThird, setFlagThird] = React.useState(true);
   const [flagFourth, setFlagFourth] = React.useState(true);
   const [flagFifth, setFlagFifth] = React.useState(true);
-  const history = useHistory();
   const buttonClick = () => {
-    // history.push("/meghabirthday/greeting");
-    window.location = '/meghabirthday/greeting'
+    window.location.replace("https://birthday-greeting1.herokuapp.com/")
   };
   const handleClickListItem = () => {
     setOpen(true);
@@ -560,7 +557,7 @@ export const Questions=(props)=> {
           aria-label="5rd option list"
           onClick={handleClickListItem4}
           role="listItem" >
-          <ListItemText primary="Best roommate" secondary={value4} />
+          <ListItemText primary="Favorite Tomboy" secondary={value4} />
         </ListItem>
         <ConfirmationDialogRaw4
           classes={{
